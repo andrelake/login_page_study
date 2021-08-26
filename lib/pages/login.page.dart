@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_page_study/models/user.model.dart';
+import 'package:login_page_study/pages/home.page.dart';
 import 'package:login_page_study/services/login.service.dart';
 
 class LoginPage extends StatefulWidget {
@@ -89,5 +90,7 @@ class _LoginPageState extends State<LoginPage> {
       list.add(User(email: email, password: password));
       print('New User - $email');
     }
+
+    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 }
